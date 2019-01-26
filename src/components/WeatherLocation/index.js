@@ -64,7 +64,7 @@ class WeatherLocation extends Component {
             <div>
                 <Location LocationInformation={location}></Location>
                 <WeatherData WeatherInformation={weather}></WeatherData>
-                <button onClick={this.handleUpdateClick}>Update!</button>
+                {/* <button onClick={this.handleUpdateClick}>Update!</button> */}
             </div>
         );
     }  

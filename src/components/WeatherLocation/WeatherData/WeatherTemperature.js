@@ -2,7 +2,7 @@ import React from 'react';
 import WeatherIcons from 'react-weathericons';
 import {WeatherStates} from '../../../constants/weathers';
 import PropTypes from 'prop-types';
-import './styles.css';
+
 const icons = {
     [WeatherStates.cloud]:"cloud",
     [WeatherStates.cloudy]:"cloudy",
@@ -13,18 +13,19 @@ const icons = {
 const getWeatherIcon = (weatherState) => {
    const icon = icons[weatherState];
   if(icon)
-    return <WeatherIcons className="wicon" name={icon} size="4x"></WeatherIcons>
+    return <WeatherIcons className="wicon" name={icon} size="2x"></WeatherIcons>
   else
-    return <WeatherIcons className="wicon" name="alien" size="4x"></WeatherIcons>
+    return <WeatherIcons className="wicon" name="alien" size="2x"></WeatherIcons>
 };
 
 const WeatherTemperature = ({temperature, weatherState}) => (
     <div className="WeatherTemperatureCont">
-        {getWeatherIcon(weatherState)}
-        
-        <span className="temperature">{`${temperature}`}</span>
-        <span className="temperatureType">C°</span>
-        
+        <h3 class="heading my-5">{getWeatherIcon(weatherState)}</h3>
+        <p class="temp">
+            <span class="temp-value">{temperature}</span>
+            <span class="deg">°</span>
+            <a href="javascript:;"><span class="temp-type">C</span></a>
+        </p>
     </div>
 );
 
