@@ -9,7 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 const Location = ({LocationInformation:{country, city}}) => (
     <div> 
-        <h1>{country} - {city}</h1> 
+        <h1 class="heading"><i class="fas fa-location-arrow"></i> {country}, {city}</h1>
     </div>
 );
 
